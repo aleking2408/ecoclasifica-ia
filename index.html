@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EcoClasifica IA</title>
+<style>
+:root{--bg:#fff;--fg:#1d2a22;--mut:#55655b;--card:#f1f6f1;--acc:#1f6b3a;--on:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#121a15;--fg:#e6efe8;--mut:#a3b5a9;--card:#1b2620;--acc:#5fc287;--on:#0d1a12}}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6}
+section,header,footer{max-width:900px;margin:auto;padding:48px 20px}
+header{text-align:center;padding-top:80px}
+h1{font-size:2.6rem;margin:0 0 8px;color:var(--acc)}
+h2{color:var(--acc);margin-top:0}
+.sub{color:var(--mut);font-size:1.15rem}
+a.btn{display:inline-block;margin-top:20px;background:var(--acc);color:var(--on);padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:var(--card);border-radius:12px;padding:18px}
+.card b{color:var(--acc)}
+footer{text-align:center;color:var(--mut);font-size:.9rem;border-top:1px solid var(--card)}
+</style>
+</head>
+<body>
+<header>
+  <h1>EcoClasifica IA</h1>
+  <p class="sub">Tomas una foto, la IA te dice a qué caneca va tu residuo.</p>
+  <a class="btn" href="#problema">Conoce el proyecto</a>
+</header>
+
+<section id="problema">
+  <h2>El problema</h2>
+  <p>En los campus y en las ciudades, los residuos se tiran mezclados. Plástico, papel y vidrio aprovechables terminan junto a restos de comida y basura no aprovechable, y el material reciclable se contamina. Muchas personas no saben a qué caneca va cada objeto y clasifican por intuición.</p>
+  <p>Nuestro enfoque es concreto: ayudar a clasificar bien <b>en la fuente</b>, dentro de un campus universitario, en tres categorías: aprovechables, orgánicos y no aprovechables.</p>
+</section>
+
+<section id="solucion">
+  <h2>Nuestra solución: cómo funciona la IA</h2>
+  <div class="grid">
+    <div class="card"><b>1. Foto</b><br>Desde el celular, sin instalar nada, el usuario fotografía el residuo.</div>
+    <div class="card"><b>2. Petición</b><br>El navegador (cliente) envía la imagen por HTTP a un servidor remoto.</div>
+    <div class="card"><b>3. Clasificación</b><br>Una red neuronal convolucional en Python identifica el tipo de residuo.</div>
+    <div class="card"><b>4. Respuesta</b><br>El servidor devuelve la caneca correcta y un consejo breve. La imagen no se almacena.</div>
+  </div>
+</section>
+
+<section id="impacto">
+  <h2>Impacto esperado</h2>
+  <div class="grid">
+    <div class="card"><b>Mejor separación</b><br>Más residuos depositados en la caneca correcta.</div>
+    <div class="card"><b>Menos contaminación</b><br>Menos material reciclable arruinado por mezclas.</div>
+    <div class="card"><b>Hábito y educación</b><br>Respuesta inmediata que enseña mientras se usa.</div>
+    <div class="card"><b>Escalable y de bajo costo</b><br>Solo requiere el celular que ya tienen los usuarios.</div>
+  </div>
+</section>
+
+<section id="abstract">
+  <h2>Abstract</h2>
+  <p lang="en">Improper waste segregation at the source remains a major obstacle to recycling in university campuses and urban communities. Mixed disposal contaminates recyclable materials, increases the volume sent to landfills, and overloads collection services. This paper presents the conceptual design of EcoClasifica IA, a web application that uses computer vision to tell users, in real time, which bin each waste item belongs to. Following an engineering design process based on problem-based learning, we formulated the problem, identified technical, economic, legal, and ethical constraints, and evaluated three alternatives: a computer vision web app, a natural-language chatbot, and IoT-enabled smart bins. A weighted decision matrix favored the web app because of its low deployment cost, minimal hardware requirements, and strong potential to build lasting habits. The proposed architecture follows a client-server model: the user's browser captures an image and sends an HTTP request to a remote server, where a convolutional neural network classifies the item and returns the result as an HTML and JavaScript response. Images are processed without being stored, in line with data protection principles. Although no functional model was implemented at this stage, the design defines the system architecture, data flow, and evaluation metrics, such as classification accuracy and user adoption. We expect EcoClasifica IA to increase correct segregation rates, reduce contamination of recyclable streams, and offer a scalable, low-cost educational tool that can later be extended to other institutions.</p>
+  <p lang="en"><i>Keywords: waste management, computer vision, artificial intelligence, web application, client-server architecture, recycling.</i></p>
+</section>
+
+<section id="equipo">
+  <h2>Equipo desarrollador</h2>
+  <div class="grid">
+    <div class="card"><b>Alejandro Pineda</b></div>
+  </div>
+</section>
+
+<footer>Universidad Sergio Arboleda · IA, Diseño y Tecnología · Docente: Oscar Andrés Arias</footer>
+</body>
+</html>
